@@ -1,3 +1,9 @@
+### This Application dev environment uses Django REST Framework as engine and Docker/docker-compose for deployment
+### and all code is then uploaded to github for storage.  This method removed the need to create a virtual environment 
+### on the dev server and allows everything to be programtically create at runtime thus leaving the server spotless. 
+### The -rm command automatically removed the containers at stop to prevent build up so it is a completely dynamic 
+### Dev/Host environment which is then easily deployed to Hosting Service. 
+
 App:
 docker-compose up
 
@@ -5,14 +11,24 @@ Linting:
 docker-compose run --rm app sh -c "flake8"
 
 Testing:
-docker-compose ....
+docker-compose run --rm app sh -c "python manage.py test"
 
-git:
+
+
+
+to post changes to git:
 git add .
 git commit -am "Name this upload."
 git push origin
 
-
-Create new App:
+Create new App through Docker:
 docker-compose run --rm app sh -c "django-admin startproject app ."
+
+Cache Credentials:
+Run this command on Terminal to cache github Auth token:
+git config --global credential.helper cache
+    then enter credentials and it will cache them
+
+to remove the cached Token use:
+git config –global –unset credential.helper
 
