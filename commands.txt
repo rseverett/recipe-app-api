@@ -7,6 +7,10 @@ docker-compose run --rm app sh -c "flake8"
 Testing:
 docker-compose ....
 
+git:
+git add .
+git commit -am "Name this upload."
+git push origin
 
 
 Create new App:
