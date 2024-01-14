@@ -1,8 +1,8 @@
 ### This Application dev environment uses Django REST Framework as engine and Docker/docker-compose for deployment
-### and all code is then uploaded to github for storage.  This method removed the need to create a virtual environment 
-### on the dev server and allows everything to be programtically create at runtime thus leaving the server spotless. 
-### The -rm command automatically removed the containers at stop to prevent build up so it is a completely dynamic 
-### Dev/Host environment which is then easily deployed to Hosting Service. 
+### and all code is then uploaded to github for storage.  This method removed the need to create a virtual environment
+### on the dev server and allows everything to be programtically create at runtime thus leaving the server spotless.
+### The -rm command automatically removed the containers at stop to prevent build up so it is a completely dynamic
+### Dev/Host environment which is then easily deployed to Hosting Service.
 
 App:
 docker-compose up
