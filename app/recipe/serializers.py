@@ -1,5 +1,5 @@
 """
-Serializers for recipes APIs.
+Serializers for recipe APIs
 """
 from rest_framework import serializers
 
@@ -13,4 +13,3 @@ class RecipeSerializer(serializers.ModelSerializer):
         model = Recipe
         fields = ['id', 'title', 'time_minutes', 'price', 'link']
         read_only_fields = ['id']
-
