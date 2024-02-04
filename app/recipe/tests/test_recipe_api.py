@@ -18,7 +18,7 @@ def create_recipe(user, **params):
     defaults = {
         'title': 'Sample recipe title',
         'time_minutes': 22,
-        'price': Decimal('5,25'),
+        'price': Decimal('5.25'),
         'description': 'Sample decription',
         'link': 'http://example.com/recipe.pdf',
     }
@@ -52,7 +52,7 @@ class PrivateRecipeApiTests(TestCase):
         )
         self.client.force_authenticate(self.user)
 
-    def test_retrieve_recipes(self):
+    def test_retrive_recipes(self):
         """Test retrieving a list of recipes."""
         create_recipe(user=self.user)
         create_recipe(user=self.user)
