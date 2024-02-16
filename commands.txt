@@ -13,8 +13,8 @@ docker-compose run --rm app sh -c "flake8"
 Testing:
 docker-compose run --rm app sh -c "python manage.py test"
 
-
-
+URL for my GIT Project:
+https://github.com/rseverett/recipe-app-api.git
 
 to post changes to git:
 git add .
@@ -31,4 +31,5 @@ git config --global credential.helper cache
 
 to remove the cached Token use:
 git config –global –unset credential.helper
+
 
